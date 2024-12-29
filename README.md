@@ -17,3 +17,9 @@ ollama run tinyllama
 ```shell
 cargo run
 ```
+
+## Use a custom prompt and/or custom model
+
+```shell
+cargo run --release -- --model tinyllama --prompt "What is ollama?"
+```
