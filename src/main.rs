@@ -5,7 +5,7 @@ use ollama_rs::Ollama;
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let ollama = Ollama::default();
 
-    let model = "llama2:latest".to_string();
+    let model = "tinyllama:latest".to_string();
     let prompt = "Why is the sky blue?".to_string();
 
     match ollama.generate(GenerationRequest::new(model, prompt)).await {
