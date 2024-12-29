@@ -8,6 +8,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let model = "tinyllama:latest".to_string();
     let prompt = "Why is the sky blue?".to_string();
 
+    println!(">>> {}", prompt);
+
     match ollama.generate(GenerationRequest::new(model, prompt)).await {
         Ok(response) => {
             println!("{}", response.response);
